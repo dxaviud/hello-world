@@ -1,5 +1,8 @@
 # hello-world
-Hello World!
+
+Hello World! This is my first repository. It contains very simple programs.
+
+About me:
 
 I am a beginner coder and github user :D
 

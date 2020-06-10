@@ -16,12 +16,14 @@ public class TicTacToeBoard {
     }
 
     public void display() {
+        System.out.println("_______");
         for (int row = 0; row < boxes.length; row++) {
+            System.out.print("|");
             for (int col = 0; col < boxes[row].length; col++) {
                 System.out.print(boxes[row][col] + "|");
             }
             System.out.println();
-            System.out.println("------");
+            System.out.println("-------");
         }
     }
 

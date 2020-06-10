@@ -84,10 +84,11 @@ public class TicTacToeGame {
                 if (input < 0 || input > 2) {
                     System.out.println("Input must be 0, 1, or 2.");
                     continue;
+                } else {
+                    return input;
                 }
-                return input;
-            } catch (Exception e) {
-                System.out.println("invalid input");
+            } catch (NumberFormatException e) {
+                System.out.println("INVALID INPUT");
             }
         }
     }

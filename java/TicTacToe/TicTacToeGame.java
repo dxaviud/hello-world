@@ -135,7 +135,7 @@ public class TicTacToeGame {
 
         //board is full but no three-in-a-row (tie)
         if (getBoardIsFull()) {
-            winner = "Tie";
+            winner = "Neither";
             return true;
         }
 

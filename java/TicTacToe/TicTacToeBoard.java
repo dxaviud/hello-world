@@ -1,5 +1,7 @@
 package TicTacToe;
 
+import TicTacToe.Marks.*;
+
 public class TicTacToeBoard {
     
     private Mark[][] boxes;

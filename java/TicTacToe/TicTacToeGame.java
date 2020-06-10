@@ -2,6 +2,8 @@ package TicTacToe;
 
 import java.util.Scanner;
 
+import TicTacToe.Marks.*;
+
 public class TicTacToeGame {
 
     private TicTacToeBoard gameBoard;

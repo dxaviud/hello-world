@@ -12,5 +12,7 @@ public class UserInputClass {
 		
 		System.out.println("You entered: " + userInput);
 
+		in.close();
+
 	}
 }

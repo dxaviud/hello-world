@@ -6,10 +6,41 @@ class Contact:
     phone_number_length = 10
 
     def __init__(self, name="Nameless", phone_number="0000000000", address="Nowhere"):
-        self.name = name
-        self.phone_number = phone_number
-        self.address = address
+        self.__name = name
+        self.__phone_number = phone_number
+        self.__address = address
 
+    @property
+    def name(self):
+        print("property name get")
+        return self.__name
+
+    @property
+    def phone_number(self):
+        print("property phone_number get")
+        return self.__phone_number
+
+    @property 
+    def address(self):
+        print("property address get")
+        return self.__address
+
+    @name.setter
+    def name(self, name):
+        print("property name set:", name)
+        self.__name = name
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        print("property phone_number set:", phone_number)
+        self.__phone_number = phone_number
+    
+    @address.setter
+    def address(self, address):
+        print("property address set:", address)
+        self.__address = address
+
+    
 class Book:
 
     @staticmethod
@@ -18,11 +49,41 @@ class Book:
 
 
     def __init__(self, title="Untitled", author="Nobody", publish_year="Never published"):
-        self.title = title
-        self.author = author
-        self.publish_year = publish_year
+        self.__title = title
+        self.__author = author
+        self.__publish_year = publish_year
 
+    @property
+    def title(self):
+        print("property title get")
+        return self.__title
 
+    @property
+    def author(self):
+        print("property author get")
+        return self.__author
+
+    @property
+    def publish_year(self):
+        print("property publish_year get")
+        return self.__publish_year
+
+    @title.setter
+    def title(self, title):
+        print("property title set:", title)
+        self.__title = title
+
+    @author.setter
+    def author(self, author):
+        print("property author set:", author)
+        self.__author = author
+
+    @publish_year.setter
+    def publish_year(self, publish_year):
+        print("property publish_year set:", publish_year)
+        self.__publish_year = publish_year
+
+    
 my_friend_contact = Contact()
 print(my_friend_contact.name, my_friend_contact.phone_number, my_friend_contact.address)
 

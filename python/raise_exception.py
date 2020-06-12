@@ -16,9 +16,16 @@ def number_contained_inclusive(number, min_value, max_value):
 	except ValueError:
 		print("Must have an int argument. Function terminated.")
 
+
+
 one_contained_inclusive_zero_ten = number_contained_inclusive(1, 0, 10)
 print(one_contained_inclusive_zero_ten)
+
 one_contained_inclusive_zero_ten = number_contained_inclusive("a string", 0, 10)
 print(one_contained_inclusive_zero_ten)
-one_contained_inclusive_zero_ten = number_contained_inclusive(1, 10, 0)
-print(one_contained_inclusive_zero_ten)
+
+try:
+	one_contained_inclusive_zero_ten = number_contained_inclusive(1, 10, 0)
+	print(one_contained_inclusive_zero_ten)
+except Exception as e:
+	print("An error occurred: ", e)

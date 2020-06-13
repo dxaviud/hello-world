@@ -1,4 +1,6 @@
-#Made this program to practice with creating classes and class instances
+#Made this program to practice with classes
+
+import pickle
 
 class Contact:
 
@@ -133,3 +135,24 @@ print(my_favorite_book)
 print("Manga is the subclass of Book.")
 my_favorite_manga = Manga(title = "One punch man", author = "Yusuke Murata", publish_year = "2013", genre = "Action, Comedy, Superhero")
 print(my_favorite_manga)
+
+
+print("\n"*10)
+
+#store my_best_friend_contact in a binary file using pickle
+
+with open("my_best_friend_contact.pickle", "wb") as output_file:
+    pickle.dump(my_best_friend_contact, output_file)
+
+def load_file(filename):
+    with open(filename, "rb") as input_file:
+        return pickle.load(input_file)
+
+#make changes to this contact after saving the contact using pickle
+my_best_friend_contact.name = "Bob"
+
+#load the same contact
+my_best_friend_contact = load_file("my_best_friend_contact.pickle")
+
+#the changes should be "undone"
+print(my_best_friend_contact.name + "    Expected: Best friend")

@@ -40,6 +40,9 @@ class Contact:
         print("property address set:", address)
         self.__address = address
 
+    def __str__(self):
+        return "Contact name: "+self.__name+"\nPhone number: "+self.__phone_number+"\nAddress: "+self.__address
+
     
 class Book:
 
@@ -83,6 +86,10 @@ class Book:
         print("property publish_year set:", publish_year)
         self.__publish_year = publish_year
 
+    def __str__(self):
+        return "Book title: " + self.__title + "\nAuthor: " + self.__author + "\nPublish year: " + self.__publish_year
+
+
     
 my_friend_contact = Contact()
 print(my_friend_contact.name, my_friend_contact.phone_number, my_friend_contact.address)
@@ -101,3 +108,8 @@ print("The Contact class has a class variable called phone_number_length:", Cont
 print("The Book class has a static method: ")
 Book.a_static_method()
 
+print("The __str__ method demonstrated: ")
+print("My best friend contact")
+print(my_best_friend_contact)
+print("My favorite book")
+print(my_favorite_book)

@@ -87,10 +87,25 @@ class Book:
         self.__publish_year = publish_year
 
     def __str__(self):
-        return "Book title: " + self.__title + "\nAuthor: " + self.__author + "\nPublish year: " + self.__publish_year
+        return "Title: " + self.__title + "\nAuthor: " + self.__author + "\nPublish year: " + self.__publish_year
 
+class Manga(Book):
 
+    def __init__(self, title="Untitled", author="Nobody", publish_year="Never published", genre="No genre"):
+        super().__init__(title=title, author=author, publish_year=publish_year)
+        self.__genre = genre
+
+    @property
+    def genre(self):
+        return self.__genre
     
+    @genre.setter
+    def genre(self, genre):
+        self.__genre = genre
+
+    def __str__(self):
+        return super().__str__() + "\nGenre: " + self.__genre
+
 my_friend_contact = Contact()
 print(my_friend_contact.name, my_friend_contact.phone_number, my_friend_contact.address)
 
@@ -113,3 +128,8 @@ print("My best friend contact")
 print(my_best_friend_contact)
 print("My favorite book")
 print(my_favorite_book)
+
+
+print("Manga is the subclass of Book.")
+my_favorite_manga = Manga(title = "One punch man", author = "Yusuke Murata", publish_year = "2013", genre = "Action, Comedy, Superhero")
+print(my_favorite_manga)

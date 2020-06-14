@@ -131,7 +131,7 @@ public class TicTacToeGame {
         }
         if (!(gameBoard.getBox(0, 2) instanceof NoMark) &&
         gameBoard.getBox(0, 2).equals(gameBoard.getBox(1, 1)) && 
-        gameBoard.getBox(2, 0).equals(gameBoard.getBox(2, 2))) {
+        gameBoard.getBox(1, 1).equals(gameBoard.getBox(2, 0))) {
             winner = gameBoard.getBox(0, 2).toString();
             return true;
         }

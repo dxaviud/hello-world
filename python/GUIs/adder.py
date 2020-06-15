@@ -23,10 +23,15 @@ class Adder:
         result_label.grid(sticky=E+W, padx=5, pady=5, columnspan=2, row=3, column=0)
         
         def add_event():
+
             first_number_text = first_number_entry.get()
             second_number_text = second_number_entry.get()
-            first_number = float(first_number_text)
-            second_number = float(second_number_text)
+            try:
+                first_number = float(first_number_text)
+                second_number = float(second_number_text)
+            except ValueError:
+                print("One or both entry incorrect.")
+                return    
             result = first_number+second_number
             result_label.config(text=str(result))
 

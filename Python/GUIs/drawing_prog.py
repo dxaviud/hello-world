@@ -1,4 +1,5 @@
-from tkinter import *
+from tkinter import Tk
+from tkinter import Canvas
 
 class Drawing():
 

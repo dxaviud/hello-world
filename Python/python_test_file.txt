@@ -1,2 +1,0 @@
-This time I don't need to manually close the output file.
-This is still pretty easy.

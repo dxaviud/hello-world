@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1593049911 source:c:\users\dx\desktop\cpp projects\snekgaem\main.cpp
-	<iostream>
-	<conio.h>
-	<windows.h>
-
